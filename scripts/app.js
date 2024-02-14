@@ -1,3 +1,5 @@
+import { callData } from "./fetch.js"
+callData()
 let injectHere = document.getElementById('injectHere')
 let pageNumber = document.getElementById('pageNumber')
 
@@ -23,16 +25,9 @@ let addToMe = 10
 let pageCount = 1;
 let maxPageCount = Math.ceil(100 / add)
 
-
-
 let globalArray = [];
 
-let callData = async () => {
 
-    const promise = await fetch('./data/data.json')
-    const data = await promise.json();
-    globalArray = data.People
-}
 
 
 
@@ -284,11 +279,6 @@ const SortHeight = async () => {
 
 
 
-if (globalArray = []) {
-    await callData()
-    await createRows()
-}
-
 
 async function createRows() {
     injectHere.innerText = ""
@@ -337,9 +327,21 @@ async function createRows() {
 
 }
 
-callData()
+// console.log(globalArray)
+// if (globalArray == []) {
+//     await SortFirstName()
+//     console.log(SortFirstName())
+//     console.log("SDfsd")
+// }
 
-createRows()
+window.onload = async () => {
+    globalArray = await callData()
+    createRows(globalArray)
+}
+
+
+
+
 // SortFirstName()
 // SortLastName()
 // SortEmail()
