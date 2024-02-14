@@ -1,0 +1,42 @@
+.sideBtn {
+    width: 100%;
+    padding: 20px 0px;
+    background-color: rgb(154, 154, 154);
+    margin-top: 20px;
+    border-radius: 15px;
+
+}
+
+.btmBtn {
+    width: 250px;
+    padding: 20px 0px;
+    background-color: rgb(154, 154, 154);
+
+    border-radius: 15px;
+
+
+}
+
+.circleBtn {
+    background-color: rgb(154, 154, 154);
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+
+
+}
+
+.scroll {
+    height: 55vh;
+    overflow: scroll;
+}
+
+.rowEdit {
+    border-top: grey solid 1px;
+    border-bottom: grey solid 1px;
+}
