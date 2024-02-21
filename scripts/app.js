@@ -1,5 +1,28 @@
 import { callData } from "./fetch.js"
 callData()
+
+
+let m = 3
+let nums = []
+
+for (let i = 0 + 1; i < m + 1; i++) {
+    if (m % i == 0) {
+        nums.push(i)
+    }
+}
+
+if (nums.length > 2) {
+    console.log("not prime")
+}
+
+console.log(nums)
+
+
+
+
+
+
+
 let injectHere = document.getElementById('injectHere')
 let pageNumber = document.getElementById('pageNumber')
 
